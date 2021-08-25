@@ -23,7 +23,7 @@
       this.guestService.getGuests().subscribe(guest =>{
         this.guests = guest;
       }, err =>{
-        console.log('Erro ao carregar os hóspedes', err);
+        console.log('Erro ao carregar os hÃ³spedes', err);
       });
     }
 
@@ -32,7 +32,7 @@
         this.guest = new GuestsModel();           //Limpa os campos.
         this.getGuests();                         //Peenche a grade novamente.
       }, err =>{
-        console.log('Erro ao salvar o hóspede', err);
+        console.log('Erro ao salvar o hÃ³spede', err);
       });
     }
 
@@ -41,7 +41,7 @@
         this.guest = new GuestsModel();           //Limpa os campos.
         this.getGuests();                         //Peenche a grade novamente.
       }, err =>{
-        console.log('Erro ao salvar o hóspede', err);
+        console.log('Erro ao salvar o hÃ³spede', err);
       });
     }
   }

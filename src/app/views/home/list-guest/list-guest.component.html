@@ -4,7 +4,7 @@
 		<th>Nome</th>
 		<th>Documento</th>
 		<th>Telefone</th>
-		<th>Ações</th>
+		<th>Deletar</th>
 	</tr>
 
 	<tr *ngFor="let guest of guests">
@@ -12,7 +12,11 @@
 		<td>{{guest.name}}</td>
 		<td>{{guest.document}}</td>
 		<td>{{guest.telephone}}</td>
-		<td><button (click)="delete(guest.id)">Remover</button></td>
+		<td>
+			<div class="example-button-row">
+				<button mat-raised-button color="warn" (click)="delete(guest.id)">Remover</button>
+			</div>
+		</td>
 	</tr>
 </table>
 
@@ -46,7 +50,8 @@
 			<td>
 				<mat-form-field class="example-full-width" appearance="fill">
 				<mat-label>Telefone</mat-label>
-				<input matInput #message maxlength="256" placeholder="telefone" [(ngModel)]="guest.telephone" [ngModelOptions]="{standalone:true}" required>
+				<!--<input matInput #message maxlength="256" placeholder="telefone" [(ngModel)]="guest.telephone" [ngModelOptions]="{standalone:true}" required>-->
+				<input matInput #message maxlength="256" type="text" placeholder="telefone" [(ngModel)]="guest.telephone" required>
 				</mat-form-field>
 			</td>
 			<td>
