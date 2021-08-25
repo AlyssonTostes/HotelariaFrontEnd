@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule} from '@angular/material/input';
 import { ListCheckinComponent } from './views/home/list-checkin/list-checkin.component';
 import { ChenkinService } from './shared/service/chenkin.service';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ChenkinService } from './shared/service/chenkin.service';
     MatTableModule, 
     HttpClientModule, 
     FormsModule, 
-    MatInputModule
+    MatInputModule, 
+    MatCheckboxModule
   ],
   providers: [HttpClientModule, GuestService, ChenkinService],
   bootstrap: [AppComponent]

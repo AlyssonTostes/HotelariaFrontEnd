@@ -5,4 +5,5 @@ export class CheckinModel{
     guest: GuestsModel | undefined;
     entryDate: Date | undefined;
     departureDate: Date | undefined;
+    additionalVehicle: boolean | undefined;
 }
