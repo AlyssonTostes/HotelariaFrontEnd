@@ -1,0 +1,18 @@
+<p>
+  <mat-toolbar>
+		<span class="mat-toolbar">Hotelaria Tostes</span>
+  </mat-toolbar>
+</p>
+
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Hóspedes">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" >
+      <app-list-guest></app-list-guest>
+    </div>
+  </mat-tab>
+  <mat-tab label="Reservas">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" >
+      <app-list-checkin></app-list-checkin>
+    </div>
+  </mat-tab>
+</mat-tab-group>

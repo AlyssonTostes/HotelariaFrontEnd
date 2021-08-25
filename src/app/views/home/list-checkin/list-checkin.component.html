@@ -1,0 +1,59 @@
+<table class="table table-hover">
+	<tr>
+		<th>ID</th>
+		<th>Hóspede</th>
+		<th>Data Entrada</th>
+		<th>Data Saída</th>
+		<th>Ações</th>
+	</tr>
+
+	<tr *ngFor="let checkin of checkin">
+		<td>{{checkin.id}}</td>
+		<td>{{checkin.guest.name}}</td>
+		<td>{{checkin.entry_date}}</td>
+		<td>{{checkin.departure_Date}}</td>
+		<td><button (click)="delete(checkin.id)">Remover</button></td>
+	</tr>
+</table>
+
+<hr>
+
+
+<form class="example-form">
+   <table class="example-full-width" cellspacing="0">
+	   <tr>
+			<td>  
+				<mat-form-field class="example-full-width" appearance="fill">
+				<mat-label>ID</mat-label>
+				<input matInput #message maxlength="10" placeholder="ID" [(ngModel)]="checkin.id" [ngModelOptions]="{standalone:true}" required>
+				</mat-form-field>
+			</td>
+
+			<td>
+				<mat-form-field class="example-full-width" appearance="fill">
+				<mat-label>ID Hóspede</mat-label>
+				<input matInput #message maxlength="256" placeholder="ID Hóspede" [(ngModel)]="checkin.guest.id" [ngModelOptions]="{standalone:true}" required>
+				</mat-form-field>
+			</td>
+			
+ 			 <td>
+				<mat-form-field class="example-full-width" appearance="fill">
+				<mat-label>Entrada</mat-label>
+				<input matInput type="datetime-local" #message maxlength="256" placeholder="Entrada" [(ngModel)]="checkin.entry_date" [ngModelOptions]="{standalone:true}" required>
+				</mat-form-field>
+			</td>
+
+			<td>
+				<mat-form-field class="example-full-width" appearance="fill">
+				<mat-label>Data Saída</mat-label>
+				<input matInput type="datetime-local" #message maxlength="256" placeholder="Data Saída" [(ngModel)]="checkin.departure_date" [ngModelOptions]="{standalone:true}" required>
+				</mat-form-field>
+			</td>
+			<td>
+			  	<div class="example-button-row">
+					<button mat-raised-button color="primary" (click)="save()">Salvar</button>
+			  	</div>
+		  	</td>
+		  </tr>
+	</table>	
+</form>
